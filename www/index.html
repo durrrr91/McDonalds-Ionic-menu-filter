@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <!-- Firebase -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+<!-- AngularFire -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-balanced">
+        <button class="button button-icon ion-minus-circled" ng-click="data.showDelete = !data.showDelete">
+          
+        </button>
+        <h1 class="title">Kafoodle test</h1>
+      </ion-header-bar>
+      <div class="bar bar-subheader item-input-inset bar-light">
+        <label class="item-input-wrapper">
+          <i class="icon ion-search placeholder-icon"></i>
+          <input type="search" ng-model="query" placeholder="Search">
+        </label>
+      </div>
+      <ion-content ng-controller="ListController" class="padding has-subheader">
+      <div class="list">
+        <div class="item range range-balanced">
+          <p class="rangeInfo">Calories</p>
+          <input ng-model="calories" type="range" name="volume" min="0" max="1000" value="1000">
+          <p class="rangeInfo">< {{calories}}kcal</p>
+        </div>
+        <div class="item range range-balanced">
+          <p class="rangeInfo">Total fat</p>
+          <input ng-model="total_fat" type="range" name="volume" min="0" max="40" value="40">
+          <p class="rangeInfo">< {{total_fat}}g</p>
+        </div>
+        <div class="item range range-balanced">
+          <p class="rangeInfo">Carbohydrates</p>
+          <input ng-model="carbohydrates" type="range" name="volume" min="0" max="100" value="100">
+          <p class="rangeInfo">< {{carbohydrates}}g</p>
+        </div>
+        <div class="item range range-balanced">
+          <p class="rangeInfo">Protein</p>
+          <input ng-model="protein" type="range" name="volume" min="0" max="40" value="40">
+          <p class="rangeInfo">< {{protein}}g</p>
+        </div>
+      </div>
+        <ion-refresher on-refresh="doRefresh()"></ion-refresher>
+        <ion-list show-delete="data.showDelete">
+          <ion-item ng-if="item.calories < calories && item.total_fat < total_fat && item.carbohydrates < carbohydrates && item.protein < protein" ng-class="{'star': item.star}" ng-repeat="item in foods | filter: query" class="item-thumbnail-left item-icon-right item-text-wrap">
+            <img ng-src="{{item.img_url}}" alt="Photo">
+            <h2>{{item.title}}</h2>
+            <p>Calories: {{item.calories}}</p>
+            <p>Total fat: {{item.total_fat}}g</p>
+            <p>Carbohydrates: {{item.carbohydrates}}g</p>
+            <p>Protein: {{item.protein}}g</p>
+            <button class="button button-clear icon ion-star button-assertive" ng-click="toggleStar(item)" ng-show="item.star"></button>
+            <ion-option-button class="button-dark" ng-click="toggleStar(item)"><i class="icon ion-star"></i>
+            </ion-option-button>
+            <ion-delete-button class="ion-minus-circled" ng-click="onItemDelete(item)">
+            </ion-delete-button>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

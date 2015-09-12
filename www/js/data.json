@@ -1,0 +1,59 @@
+
+	{
+		"items": [
+			{
+				"title": "Big Mac",
+				"calories": 540,
+				"total_fat": 28,
+				"carbohydrates": 47,
+				"protein": 25,
+				"category": "burgers",
+				"img_url": "http://www.mcdonalds.com/content/dam/McDonalds/item/s-mcdonalds-Big-Mac.png"
+			},
+			{
+				"title": "Hamburger",
+				"calories": 250,
+				"total_fat": 8,
+				"carbohydrates": 32,
+				"protein": 12,
+				"category": "burgers",
+				"img_url": "http://www.mcdonalds.com/content/dam/McDonalds/item/s-mcdonalds-Hamburger.png"
+			},
+			{
+				"title": "Premium Bacon Ranch Salad",
+				"calories": 190,
+				"total_fat": 12,
+				"carbohydrates": 8,
+				"protein": 14,
+				"category": "salads",
+				"img_url": "http://www.mcdonalds.com/content/dam/McDonalds/item/s-mcdonalds-Premium-Bacon-Ranch-Salad-without-chicken.png"
+			},
+			{
+				"title": "Premium Southwest Salad",
+				"calories": 160,
+				"total_fat": 7,
+				"carbohydrates": 18,
+				"protein": 8,
+				"category": "salads",
+				"img_url": "http://www.mcdonalds.com/content/dam/McDonalds/item/s-mcdonalds-Premium-Southwest-Salad-without-chicken.png"
+			},
+			{
+				"title": "Hot Fudge Sundae",
+				"calories": 330,
+				"total_fat": 9,
+				"carbohydrates": 53,
+				"protein": 8,
+				"category": "desserts",
+				"img_url": "http://www.mcdonalds.com/content/dam/McDonalds/item/s-mcdonalds-Hot-Fudge-Sundae.png"
+			},
+			{
+				"title": "McCafe Vanilla Shake",
+				"calories": 530,
+				"total_fat": 15,
+				"carbohydrates": 86,
+				"protein": 11,
+				"category": "desserts",
+				"img_url": "http://www.mcdonalds.com/content/dam/McDonalds/item/s-mcdonalds-Vanilla-McCafe-Shake-12-fl-oz-cup.png"
+			}
+		]
+	}
