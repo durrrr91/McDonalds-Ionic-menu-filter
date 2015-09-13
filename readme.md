@@ -1,3 +1,9 @@
-Testing the Ionic framework for my Kafoodle interview.
-Using Firebase to store some sample data. Search or filter McDonalds menu items by Calories, Total fat, Carbohydrates or Protein. 
-Using some basic Ionic functionality to favourite and delete items. Only the favorutie item is stored in the database and deleted items will be back after a refresh. Scroll up to refresh.
+# Ionic Kafoodle test
+
+This app allows you to filter McDonalds menu items by name, calories, total fat, carbohydrates or protein. You can also:
+
+  - Favourite items
+  - Delete items*
+
+*Deleted items are not saved in the database so they can be back after a refresh. Scroll list up to refresh.
+Firebase is used to store the sample data and user favourites.
