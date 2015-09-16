@@ -7,3 +7,5 @@ This app allows you to filter McDonalds menu items by name, calories, total fat,
 
 *Deleted items are not saved in the database so they can be back after a refresh. Scroll list up to refresh.
 Firebase is used to store the sample data and user favourites.
+
+Live here: http://nikolaystoev.co.uk/ex/ionic_test
